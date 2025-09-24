@@ -1352,7 +1352,7 @@ LRESULT CALLBACK MainWndProc(HWND hwnd, UINT umsg, WPARAM wParam, LPARAM lParam)
 
 	case WM_CLOSE:
 		if (bMinimizeToTray) {
-			NP2MinimizeWind(hwnd);
+			ExitApplication(hwnd);
 		} else {
 			ExitApplication(hwnd);
 		}
@@ -8687,3 +8687,4 @@ void AutoSave_DoWork(FileSaveFlag saveFlag) noexcept {
 		DeleteFile(tchPath);
 	}
 }
+
