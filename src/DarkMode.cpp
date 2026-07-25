@@ -64,7 +64,7 @@ static void DarkMode_SetCustomColors() noexcept {
 	dmlib::setViewBackgroundColor(HEXRGB(0x1E1E1E));
 	dmlib::setViewTextColor(HEXRGB(0xD4D4D4));
 	dmlib::setViewGridlinesColor(HEXRGB(0x3C3C3C));
-	dmlib::setHeaderBackgroundColor(HEXRGB(0x2D2D2D));
+	// dmlib::setHeaderBackgroundColor(HEXRGB(0x2D2D2D));
 	dmlib::setHeaderTextColor(HEXRGB(0xD4D4D4));
 	dmlib::setHeaderEdgeColor(HEXRGB(0x555555));
 	dmlib::updateViewBrushesAndPens();
@@ -363,7 +363,9 @@ void DarkMode_ApplyToWindow(HWND hwnd, bool useWin11Features) noexcept {
 }
 
 void DarkMode_ApplyToBars(HWND hwnd, HWND hwndToolbar, HWND hwndReBar, HWND hwndStatus) noexcept {
+	dmlib::setDarkLineAbovePanelToolbar(hwndToolbar);
 	dmlib::setStatusBarCtrlSubclass(hwndStatus);
+	dmlib::setWindowEraseBgSubclass(hwndReBar);
 	dmlib::setDarkScrollBar(hwndEdit);
 	dmlib::setDarkTooltips(hwndToolbar, static_cast<int>(dmlib::ToolTipsType::toolbar));
 }
