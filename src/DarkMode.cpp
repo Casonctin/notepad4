@@ -366,7 +366,6 @@ void DarkMode_ApplyToBars(HWND hwnd, HWND hwndToolbar, HWND hwndReBar, HWND hwnd
 	dmlib::setDarkLineAbovePanelToolbar(hwndToolbar);
 	dmlib::setStatusBarCtrlSubclass(hwndStatus);
 	dmlib::setWindowEraseBgSubclass(hwndReBar);
-	dmlib::setWindowNotifyCustomDrawSubclass(hwnd);
 	dmlib::setDarkScrollBar(hwndEdit);
 	dmlib::setDarkTooltips(hwndToolbar, static_cast<int>(dmlib::ToolTipsType::toolbar));
 }
