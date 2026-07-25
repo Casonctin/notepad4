@@ -363,9 +363,7 @@ void DarkMode_ApplyToWindow(HWND hwnd, bool useWin11Features) noexcept {
 }
 
 void DarkMode_ApplyToBars(HWND hwnd, HWND hwndToolbar, HWND hwndReBar, HWND hwndStatus) noexcept {
-	dmlib::setDarkLineAbovePanelToolbar(hwndToolbar);
 	dmlib::setStatusBarCtrlSubclass(hwndStatus);
-	dmlib::setWindowEraseBgSubclass(hwndReBar);
 	dmlib::setDarkScrollBar(hwndEdit);
 	dmlib::setDarkTooltips(hwndToolbar, static_cast<int>(dmlib::ToolTipsType::toolbar));
 }
