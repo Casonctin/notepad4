@@ -49,7 +49,7 @@ static constexpr COLORREF HEXRGB(DWORD rrggbb) noexcept {
 }
 
 static void DarkMode_SetCustomColors() noexcept {
-	dmlib::setBackgroundColor(HEXRGB(0x2D2D2D));
+	// dmlib::setBackgroundColor(HEXRGB(0x2D2D2D));
 	dmlib::setCtrlBackgroundColor(HEXRGB(0x383838));
 	dmlib::setHotBackgroundColor(HEXRGB(0x454545));
 	dmlib::setDlgBackgroundColor(HEXRGB(0x252526));
